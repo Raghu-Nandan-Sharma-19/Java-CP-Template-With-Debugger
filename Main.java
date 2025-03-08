@@ -33,6 +33,10 @@ public class Main {
             return Double.parseDouble(next());
         }
 
+        float nextFloat() {
+            return Float.parseFloat(next());
+        }
+
         String nextLine() {
             String str = "";
             try {
@@ -41,27 +45,6 @@ public class Main {
                 e.printStackTrace();
             }
             return str;
-        }
-    }
-
-    static class FastWriter {
-        private final BufferedWriter bw;
-
-        public FastWriter() {
-            this.bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        }
-
-        public void print(Object object) throws IOException {
-            bw.append("" + object);
-        }
-
-        public void println(Object object) throws IOException {
-            print(object);
-            bw.append("\n");
-        }
-
-        public void close() throws IOException {
-            bw.close();
         }
     }
 
@@ -83,21 +66,12 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        FastReader in = new FastReader();
-        FastWriter out = new FastWriter();
-
-        // to take input use (.nextInt() and every method is same as scanner methods)
-        int n = in.nextInt();
-
-        // to print output
-        out.println(n); // or out.print(n);
-
-        // to debug --> the debug goes into error.txt
-        Debug.debug("n", n);
-
-        out.close();
+    public static void main(String[] args) {
+        FastReader sc = new FastReader();
+        PrintWriter out = new PrintWriter(System.out);
+        
+        
+        
+        out.flush();
     }
 }
-
-
